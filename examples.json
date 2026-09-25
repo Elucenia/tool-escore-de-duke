@@ -1,0 +1,62 @@
+[
+  {
+    "label": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+    "input": {
+      "tempo": 9,
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "raw": {
+        "score": 0
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "tempo": 9,
+      "st": 1,
+      "angina": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "12 min, sem ST, sem angina: +12 (baixo risco)",
+    "input": {
+      "tempo": 12,
+      "st": 0,
+      "angina": "0"
+    },
+    "expected": {
+      "raw": {
+        "score": 12
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "tempo": 12,
+      "st": 0,
+      "angina": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+    "input": {
+      "tempo": 3,
+      "st": 2,
+      "angina": "2"
+    },
+    "expected": {
+      "raw": {
+        "score": -15
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "tempo": 3,
+      "st": 2,
+      "angina": "2"
+    },
+    "expandedZeroOptions": []
+  }
+]

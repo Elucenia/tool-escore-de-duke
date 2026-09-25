@@ -1,0 +1,166 @@
+{
+  "tool": {
+    "id": "escore-de-duke",
+    "title": "Escore de Duke (esteira)",
+    "short": "Prognóstico no teste ergométrico",
+    "spec": [
+      "cardiologia",
+      "medicina-esportiva"
+    ],
+    "desc": "Calcule o escore de esteira de Duke (Duke Treadmill Score) no protocolo de Bruce, com a classificação de risco e a mortalidade anual estimada.",
+    "lead": "Combina tempo de exercício, desnível do segmento ST e angina no teste ergométrico (protocolo de Bruce) para estimar o prognóstico na suspeita de doença coronária.",
+    "fields": [
+      [
+        "tempo",
+        "Tempo de exercício (protocolo de Bruce)",
+        "num",
+        {
+          "min": 0,
+          "max": 30,
+          "step": "0.1",
+          "unit": "min",
+          "ph": "9"
+        }
+      ],
+      [
+        "st",
+        "Maior desnível do ST (em qualquer derivação, exceto aVR)",
+        "num",
+        {
+          "min": 0,
+          "max": 10,
+          "step": "0.1",
+          "unit": "mm",
+          "ph": "1"
+        }
+      ],
+      [
+        "angina",
+        "Angina durante o teste",
+        "radio",
+        {
+          "opts": {
+            "0": "Não",
+            "1": "Não limitante",
+            "2": "Limitante (motivo da interrupção)"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>Escore = tempo de exercício (min) − 5 × desnível do ST (mm) − 4 × índice de angina (0 = ausente, 1 = não limitante, 2 = limitante).</p>",
+    "table": [
+      [
+        "Escore",
+        "Risco",
+        "Mortalidade anual"
+      ],
+      [
+        "≥ +5",
+        "Baixo",
+        "0,25%"
+      ],
+      [
+        "−10 a +4",
+        "Intermediário",
+        "1,25%"
+      ],
+      [
+        "≤ −11",
+        "Alto",
+        "5,25%"
+      ]
+    ],
+    "tips": [
+      "Validado para o protocolo de <strong>Bruce</strong>; em outros protocolos, converta a carga para o tempo equivalente de Bruce (ou use METs com cautela).",
+      "Menos preciso em idosos (&gt; 75 anos), em quem já tem revascularização e com alterações basais do ST (BRE, pré-excitação, digital, HVE com strain).",
+      "Risco alto indica investigação anatômica (cineangiocoronariografia ou angiotomografia); risco intermediário costuma pedir teste de imagem funcional.",
+      "Some ao Duke a capacidade funcional, a recuperação da FC e o comportamento da pressão: todos têm valor prognóstico independente."
+    ],
+    "sources": [
+      [
+        "Mark DB et al. Exercise treadmill score for predicting prognosis in coronary artery disease. Ann Intern Med, 1987.",
+        "https://doi.org/10.7326/0003-4819-106-6-793"
+      ],
+      [
+        "Mark DB et al. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med, 1991.",
+        "https://doi.org/10.1056/NEJM199109193251204"
+      ]
+    ],
+    "cases": [
+      [
+        "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        {
+          "tempo": 9,
+          "st": 1,
+          "angina": "1"
+        },
+        {
+          "raw": {
+            "score": 0
+          },
+          "level": "mid"
+        }
+      ],
+      [
+        "12 min, sem ST, sem angina: +12 (baixo risco)",
+        {
+          "tempo": 12,
+          "st": 0,
+          "angina": "0"
+        },
+        {
+          "raw": {
+            "score": 12
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        {
+          "tempo": 3,
+          "st": 2,
+          "angina": "2"
+        },
+        {
+          "raw": {
+            "score": -15
+          },
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "cardiologia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/cardiologia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/cardiologia.php",
+    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
+    "bytes": 61303
+  },
+  "clinicalValidation": "not-performed"
+}
