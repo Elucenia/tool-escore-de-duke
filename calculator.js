@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-escore-de-duke · Elucenia · https://github.com/Elucenia/tool-escore-de-duke
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escore-de-duke","title":"Escore de Duke (esteira)","fields":[["tempo","Tempo de exercício (protocolo de Bruce)","num",{"min":0,"max":30,"step":"0.1","unit":"min","ph":"9"}],["st","Maior desnível do ST (em qualquer derivação, exceto aVR)","num",{"min":0,"max":10,"step":"0.1","unit":"mm","ph":"1"}],["angina","Angina durante o teste","radio",{"opts":{"0":"Não","1":"Não limitante","2":"Limitante (motivo da interrupção)"}}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
