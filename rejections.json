@@ -1,0 +1,334 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field tempo",
+    "input": {
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field tempo",
+    "input": {
+      "tempo": "",
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" tempo",
+    "input": {
+      "tempo": "NaN",
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" tempo",
+    "input": {
+      "tempo": "Infinity",
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" tempo",
+    "input": {
+      "tempo": "1e309",
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" tempo",
+    "input": {
+      "tempo": "invalid",
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} tempo",
+    "input": {
+      "tempo": {},
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true tempo",
+    "input": {
+      "tempo": true,
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum tempo",
+    "input": {
+      "tempo": -1,
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum tempo",
+    "input": {
+      "tempo": 33,
+      "st": 1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tempo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field st",
+    "input": {
+      "tempo": 9,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field st",
+    "input": {
+      "tempo": 9,
+      "st": "",
+      "angina": "1"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" st",
+    "input": {
+      "tempo": 9,
+      "st": "NaN",
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" st",
+    "input": {
+      "tempo": 9,
+      "st": "Infinity",
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" st",
+    "input": {
+      "tempo": 9,
+      "st": "1e309",
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" st",
+    "input": {
+      "tempo": 9,
+      "st": "invalid",
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} st",
+    "input": {
+      "tempo": 9,
+      "st": {},
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true st",
+    "input": {
+      "tempo": 9,
+      "st": true,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum st",
+    "input": {
+      "tempo": 9,
+      "st": -1,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum st",
+    "input": {
+      "tempo": 9,
+      "st": 11,
+      "angina": "1"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "st"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field angina",
+    "input": {
+      "tempo": 9,
+      "st": 1
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "angina"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field angina",
+    "input": {
+      "tempo": 9,
+      "st": 1,
+      "angina": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "angina"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option angina",
+    "input": {
+      "tempo": 9,
+      "st": 1,
+      "angina": "__ELUCENIA_INVALID_OPTION__"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "angina"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

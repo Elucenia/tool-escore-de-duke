@@ -1,6 +1,14 @@
 [
   {
-    "label": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+    "id": "escore-de-duke",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+    "originalInput": {
+      "tempo": 9,
+      "st": 1,
+      "angina": "1"
+    },
     "input": {
       "tempo": 9,
       "st": 1,
@@ -12,15 +20,35 @@
       },
       "level": "mid"
     },
-    "originalInput": {
-      "tempo": 9,
-      "st": 1,
-      "angina": "1"
+    "recordedResult": {
+      "main": [
+        "0,0",
+        ""
+      ],
+      "label": "Escore de Duke",
+      "raw": {
+        "score": 0
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "12 min, sem ST, sem angina: +12 (baixo risco)",
+    "id": "escore-de-duke",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+    "originalInput": {
+      "tempo": 12,
+      "st": 0,
+      "angina": "0"
+    },
     "input": {
       "tempo": 12,
       "st": 0,
@@ -32,15 +60,35 @@
       },
       "level": "low"
     },
-    "originalInput": {
-      "tempo": 12,
-      "st": 0,
-      "angina": "0"
+    "recordedResult": {
+      "main": [
+        "12,0",
+        ""
+      ],
+      "label": "Escore de Duke",
+      "raw": {
+        "score": 12
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+    "id": "escore-de-duke",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+    "originalInput": {
+      "tempo": 3,
+      "st": 2,
+      "angina": "2"
+    },
     "input": {
       "tempo": 3,
       "st": 2,
@@ -52,11 +100,23 @@
       },
       "level": "high"
     },
-    "originalInput": {
-      "tempo": 3,
-      "st": 2,
-      "angina": "2"
+    "recordedResult": {
+      "main": [
+        "-15,0",
+        ""
+      ],
+      "label": "Escore de Duke",
+      "raw": {
+        "score": -15
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

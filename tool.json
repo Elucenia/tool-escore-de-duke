@@ -3,12 +3,13 @@
     "id": "escore-de-duke",
     "title": "Escore de Duke (esteira)",
     "short": "Prognóstico no teste ergométrico",
+    "desc": "Calcule o escore de esteira de Duke (Duke Treadmill Score) no protocolo de Bruce, com a classificação de risco e a mortalidade anual estimada.",
+    "lead": "Combina tempo de exercício, desnível do segmento ST e angina no teste ergométrico (protocolo de Bruce) para estimar o prognóstico na suspeita de doença coronária.",
+    "kind": "Calculadora",
     "spec": [
       "cardiologia",
       "medicina-esportiva"
     ],
-    "desc": "Calcule o escore de esteira de Duke (Duke Treadmill Score) no protocolo de Bruce, com a classificação de risco e a mortalidade anual estimada.",
-    "lead": "Combina tempo de exercício, desnível do segmento ST e angina no teste ergométrico (protocolo de Bruce) para estimar o prognóstico na suspeita de doença coronária.",
     "fields": [
       [
         "tempo",
@@ -48,34 +49,6 @@
       ]
     ],
     "formula": "<p>Escore = tempo de exercício (min) − 5 × desnível do ST (mm) − 4 × índice de angina (0 = ausente, 1 = não limitante, 2 = limitante).</p>",
-    "table": [
-      [
-        "Escore",
-        "Risco",
-        "Mortalidade anual"
-      ],
-      [
-        "≥ +5",
-        "Baixo",
-        "0,25%"
-      ],
-      [
-        "−10 a +4",
-        "Intermediário",
-        "1,25%"
-      ],
-      [
-        "≤ −11",
-        "Alto",
-        "5,25%"
-      ]
-    ],
-    "tips": [
-      "Validado para o protocolo de <strong>Bruce</strong>; em outros protocolos, converta a carga para o tempo equivalente de Bruce (ou use METs com cautela).",
-      "Menos preciso em idosos (&gt; 75 anos), em quem já tem revascularização e com alterações basais do ST (BRE, pré-excitação, digital, HVE com strain).",
-      "Risco alto indica investigação anatômica (cineangiocoronariografia ou angiotomografia); risco intermediário costuma pedir teste de imagem funcional.",
-      "Some ao Duke a capacidade funcional, a recuperação da FC e o comportamento da pressão: todos têm valor prognóstico independente."
-    ],
     "sources": [
       [
         "Mark DB et al. Exercise treadmill score for predicting prognosis in coronary artery disease. Ann Intern Med, 1987.",
@@ -130,9 +103,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -141,17 +111,183 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T13:01:58.037Z",
+      "total": 240,
+      "passed": 240,
+      "evidencePath": "reports/review-20261003/four-linear-volume-source-oracles-final23.json",
+      "evidenceSha256": "7e5cc71340a2edf4506eee3a49c2c6fcc7a71cc73d2002cc57afdc928637ce5d",
+      "peerEvidencePath": "reports/review-20261003/independent-four-linear-volume-source-oracles-final23.json",
+      "peerEvidenceSha256": "aa29f261bf43be7f7f285898bce5ae671883847d5c3b9171793d372d1eecf31e",
+      "scope": "Arithmetic equation only, with source-version limits recorded. No approval of input clinical classification, thresholds, predictions, translations, rights or release.",
+      "source": {
+        "url": "https://cvquality.acc.org/docs/default-source/ncdr/Data-Collection/cathpci_v4_codersdictionary_4-4.pdf",
+        "edition": "ACC NCDR CathPCI Registry v4.4,2011, citing Mark1987; AHA exercise standards2013",
+        "locator": "Original institutional dictionary, PDFp25, seq5202 formula and angina0/1/2",
+        "access": "Official registry definition read directly2026-10-04; entered Bruce time−5×entered ST mm−4×entered angina points. The NCDR instruction maps ST<1mm to0; the application takes entered ST continuously. The test only uses0 or≥1mm, where the versions agree. No approval of the discrepancy for0<ST<1, pre-processing, prognosis or exercise-test selection.",
+        "corroboration": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0b013e31829b5b44?download=true",
+        "unresolvedVariant": "NCDR ST<1mm zeroing is absent from current input contract; retain source discrepancy until original Mark protocol is reviewed."
+      },
+      "implementations": [
+        {
+          "app": "website",
+          "id": "escore-de-duke",
+          "sha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+        },
+        {
+          "app": "dashboard",
+          "id": "escore-de-duke",
+          "sha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+        },
+        {
+          "app": "command-center",
+          "id": "escore-de-duke",
+          "sha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+        }
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Duke Treadmill/Mark 1987:tempo−5 ST−4 angina; nomograma validado 1991",
+    "implementationVersion": "escore-de-duke@native-2026-10-03+68bf426d89cc",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/3579066/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Escore = tempo de exercício (min) − 5 × desnível do ST (mm) − 4 × índice de angina (0 = ausente, 1 = não limitante, 2 = limitante).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "tempo",
+            "label": "Tempo de exercício (protocolo de Bruce)",
+            "type": "num",
+            "min": 0,
+            "max": 30,
+            "unit": "min",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "st",
+            "label": "Maior desnível do ST (em qualquer derivação, exceto aVR)",
+            "type": "num",
+            "min": 0,
+            "max": 10,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "angina",
+            "label": "Angina durante o teste",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "1": "Não limitante",
+              "2": "Limitante (motivo da interrupção)"
+            }
+          }
+        ],
+        "hash": "a01b61517fe8d291595f7aa1081784f66384252a0084d5930492881ecae3a508"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Mark DB et al. Exercise treadmill score for predicting prognosis in coronary artery disease. Ann Intern Med, 1987.",
+          "url": "https://doi.org/10.7326/0003-4819-106-6-793",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Exercise treadmill score for predicting prognosis in coronary artery disease.",
+            "year": "1987",
+            "firstPublicationDate": "1987-06-01",
+            "doi": "10.7326/0003-4819-106-6-793",
+            "pmid": "3579066",
+            "journal": "Annals of internal medicine",
+            "authors": "Mark DB, Hlatky MA, Harrell FE, Lee KL, Califf RM, Pryor DB."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/3579066/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "0398142b5bdf18b63830101fc1d7351c2b89ea63748c813b845c250038c42652",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Mark DB et al. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med, 1991.",
+          "url": "https://doi.org/10.1056/NEJM199109193251204",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease.",
+            "year": "1991",
+            "firstPublicationDate": "1991-09-01",
+            "doi": "10.1056/nejm199109193251204",
+            "pmid": "1875969",
+            "journal": "The New England journal of medicine",
+            "authors": "Mark DB, Shaw L, Harrell FE, Hlatky MA, Lee KL, Bengtson JR, McCants CB, Califf RM, Pryor DB."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/1875969/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "fadbc3cb90046cc146a41808774e709a17fdc9d898a997eab0e65eb1cc00186b",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T13:01:58.037Z",
+        "total": 240,
+        "passed": 240,
+        "evidencePath": "reports/review-20261003/four-linear-volume-source-oracles-final23.json",
+        "scope": "Arithmetic equation only, with source-version limits recorded. No approval of input clinical classification, thresholds, predictions, translations, rights or release.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "a671c4c5afa5fb52e605773643e6cbd9c28b626a1465892554d1abc527d60231"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+    },
+    "limits": "O Duke Treadmill Score de 1987 foi desenvolvido para prognóstico em pessoas com dor torácica submetidas a teste de esteira e cateterismo. A fórmula depende das convenções de tempo, desvio de ST e índice de angina do protocolo. O prognóstico do escore não confirma diagnóstico coronário nem a segurança de realizar esforço em uma pessoa.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.891Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não explicita protocolo Bruce, unidades de tempo/ST ou nomograma posterior completo; não confere elegibilidade ao teste de esforço."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/escore-de-duke/calculator.js",
+    "bytes": 4978,
+    "sha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "2766e1ab1002e2fee69b5f7660ae33081b1317dc50cf808867fd6a71b54dd6e1",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 240,
+      "sha256": "d6f9f7e40b1ef66b73fb1836cf5cbbc65cc12390eb9eb837b506179a4e547143",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
