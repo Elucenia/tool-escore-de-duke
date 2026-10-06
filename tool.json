@@ -151,7 +151,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Duke Treadmill/Mark 1987:tempo−5 ST−4 angina; nomograma validado 1991",
-    "implementationVersion": "escore-de-duke@native-2026-10-03+68bf426d89cc",
+    "implementationVersion": "escore-de-duke@native-2026-10-05+61f69462febc",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/3579066/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -257,7 +257,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+      "implementationHash": "61f69462febc8bfbb4a5766369914e86dfe0b3b8c0e330bfe5f48a4cc0ce1917",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "escore-de-duke@native-2026-10-03+68bf426d89cc",
+          "previousImplementationHash": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3",
+          "implementationHash": "61f69462febc8bfbb4a5766369914e86dfe0b3b8c0e330bfe5f48a4cc0ce1917",
+          "scientificBodySha256": "c598f841a741845b4103f31defc639ed9338a2a39e5d5f92e083f5958d520364",
+          "metadataContractHash": "a01b61517fe8d291595f7aa1081784f66384252a0084d5930492881ecae3a508",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O Duke Treadmill Score de 1987 foi desenvolvido para prognóstico em pessoas com dor torácica submetidas a teste de esteira e cateterismo. A fórmula depende das convenções de tempo, desvio de ST e índice de angina do protocolo. O prognóstico do escore não confirma diagnóstico coronário nem a segurança de realizar esforço em uma pessoa.",
     "sourceLimitEvidence": {
@@ -276,15 +304,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/escore-de-duke/calculator.js",
-    "bytes": 4978,
-    "sha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3"
+    "bytes": 5183,
+    "sha256": "61f69462febc8bfbb4a5766369914e86dfe0b3b8c0e330bfe5f48a4cc0ce1917"
   },
-  "sourceToolSha256": "2766e1ab1002e2fee69b5f7660ae33081b1317dc50cf808867fd6a71b54dd6e1",
+  "sourceToolSha256": "572eba320532691cf99825b07381ceb9b35ca0e9826ad3ee9540c7034462e91d",
   "omittedFullReferenceBanks": [
     {
       "rows": 240,
       "sha256": "d6f9f7e40b1ef66b73fb1836cf5cbbc65cc12390eb9eb837b506179a4e547143",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

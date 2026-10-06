@@ -1,0 +1,888 @@
+{
+  "id": "escore-de-duke",
+  "implementationVersion": "escore-de-duke@native-2026-10-05+61f69462febc",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidade anual estimada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "1,25%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risco intermediário",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidade anual estimada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "0,25%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Baixo risco",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidade anual estimada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "5,25%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Alto risco",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Estimated annual mortality",
+                "locale": "en",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1.25%",
+                "locale": "en",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Intermediate risk",
+            "locale": "en",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Estimated annual mortality",
+                "locale": "en",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0.25%",
+                "locale": "en",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Low risk",
+            "locale": "en",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Estimated annual mortality",
+                "locale": "en",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5.25%",
+                "locale": "en",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "High risk",
+            "locale": "en",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidad anual estimada",
+                "locale": "es",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1,25%",
+                "locale": "es",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo intermedio",
+            "locale": "es",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidad anual estimada",
+                "locale": "es",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0,25%",
+                "locale": "es",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo bajo",
+            "locale": "es",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalidad anual estimada",
+                "locale": "es",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5,25%",
+                "locale": "es",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo alto",
+            "locale": "es",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalité annuelle estimée",
+                "locale": "fr",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1,25%",
+                "locale": "fr",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque intermédiaire",
+            "locale": "fr",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalité annuelle estimée",
+                "locale": "fr",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0,25%",
+                "locale": "fr",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Faible risque",
+            "locale": "fr",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalité annuelle estimée",
+                "locale": "fr",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5,25%",
+                "locale": "fr",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque élevé",
+            "locale": "fr",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Geschätzte jährliche Mortalität",
+                "locale": "de",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1,25%",
+                "locale": "de",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Intermediäres Risiko",
+            "locale": "de",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Geschätzte jährliche Mortalität",
+                "locale": "de",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0,25%",
+                "locale": "de",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Niedriges Risiko",
+            "locale": "de",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Geschätzte jährliche Mortalität",
+                "locale": "de",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5,25%",
+                "locale": "de",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hohes Risiko",
+            "locale": "de",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalità annua stimata",
+                "locale": "it",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1,25%",
+                "locale": "it",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio intermedio",
+            "locale": "it",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalità annua stimata",
+                "locale": "it",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0,25%",
+                "locale": "it",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio basso",
+            "locale": "it",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Mortalità annua stimata",
+                "locale": "it",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5,25%",
+                "locale": "it",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio elevato",
+            "locale": "it",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الوفيات السنوية المقدرة",
+                "locale": "ar",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "١٫٢٥%",
+                "locale": "ar",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطر متوسط",
+            "locale": "ar",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الوفيات السنوية المقدرة",
+                "locale": "ar",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "٠٫٢٥%",
+                "locale": "ar",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطر منخفض",
+            "locale": "ar",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الوفيات السنوية المقدرة",
+                "locale": "ar",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "٥٫٢٥%",
+                "locale": "ar",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطر مرتفع",
+            "locale": "ar",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "估计年死亡率",
+                "locale": "zh",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1.25%",
+                "locale": "zh",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "中等风险",
+            "locale": "zh",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "估计年死亡率",
+                "locale": "zh",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0.25%",
+                "locale": "zh",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低风险",
+            "locale": "zh",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "估计年死亡率",
+                "locale": "zh",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5.25%",
+                "locale": "zh",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高风险",
+            "locale": "zh",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "推定年間死亡率",
+                "locale": "ja",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1.25%",
+                "locale": "ja",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "中等度リスク",
+            "locale": "ja",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "推定年間死亡率",
+                "locale": "ja",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0.25%",
+                "locale": "ja",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低リスク",
+            "locale": "ja",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "推定年間死亡率",
+                "locale": "ja",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5.25%",
+                "locale": "ja",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高リスク",
+            "locale": "ja",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "अनुमानित वार्षिक मृत्यु दर",
+                "locale": "hi",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "1.25%",
+                "locale": "hi",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  1.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "मध्यम जोखिम",
+            "locale": "hi",
+            "template": "documented-authored-f0c8ac46cc13ac3c0015"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "अनुमानित वार्षिक मृत्यु दर",
+                "locale": "hi",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "0.25%",
+                "locale": "hi",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  0.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "कम जोखिम",
+            "locale": "hi",
+            "template": "documented-authored-bc88c03c67dd7c149087"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "अनुमानित वार्षिक मृत्यु दर",
+                "locale": "hi",
+                "template": "documented-authored-8cf3525f79e282659709"
+              },
+              "value": {
+                "text": "5.25%",
+                "locale": "hi",
+                "template": "documented-authored-05af61c40a8e4491feb8",
+                "sourceNumbers": [
+                  5.25
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "उच्च जोखिम",
+            "locale": "hi",
+            "template": "documented-authored-a9e956e9a4b62e85503a"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

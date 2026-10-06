@@ -73,3 +73,34 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Rischio intermedio
+
+| Dettagli del risultato | |
+| --- | --- |
+| Mortalità annua stimata | 1,25% |
+
+
+### 2
+
+Rischio basso
+
+| Dettagli del risultato | |
+| --- | --- |
+| Mortalità annua stimata | 0,25% |
+
+
+### 3
+
+Rischio elevato
+
+| Dettagli del risultato | |
+| --- | --- |
+| Mortalità annua stimata | 5,25% |
+

@@ -1,0 +1,190 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "escore-de-duke",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "780996e828bdac042381efee021afc670b5ee611",
+    "oldEngineSha256": "68bf426d89ccbacbcd330344153e826468d5977e98391fd081288b0c6a421ae3",
+    "currentEngineSha256": "61f69462febc8bfbb4a5766369914e86dfe0b3b8c0e330bfe5f48a4cc0ce1917"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "9 min, ST 1 mm, angina não limitante: escore 0 (intermediário)",
+      "input": {
+        "tempo": 9,
+        "st": 1,
+        "angina": "1"
+      },
+      "publicOutput": {
+        "id": "escore-de-duke",
+        "main": [
+          "0,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "raw": {
+          "score": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 0
+        },
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "level": "mid",
+        "verdict": "Risco intermediário",
+        "rows": [
+          [
+            "Mortalidade anual estimada",
+            "1,25%"
+          ]
+        ],
+        "raw": {
+          "score": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "12 min, sem ST, sem angina: +12 (baixo risco)",
+      "input": {
+        "tempo": 12,
+        "st": 0,
+        "angina": "0"
+      },
+      "publicOutput": {
+        "id": "escore-de-duke",
+        "main": [
+          "12,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "raw": {
+          "score": 12
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 12
+        },
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "12,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "level": "low",
+        "verdict": "Baixo risco",
+        "rows": [
+          [
+            "Mortalidade anual estimada",
+            "0,25%"
+          ]
+        ],
+        "raw": {
+          "score": 12
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "3 min, ST 2 mm, angina limitante: −15 (alto risco)",
+      "input": {
+        "tempo": 3,
+        "st": 2,
+        "angina": "2"
+      },
+      "publicOutput": {
+        "id": "escore-de-duke",
+        "main": [
+          "-15,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "raw": {
+          "score": -15
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": -15
+        },
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "-15,0",
+          ""
+        ],
+        "label": "Escore de Duke",
+        "level": "high",
+        "verdict": "Alto risco",
+        "rows": [
+          [
+            "Mortalidade anual estimada",
+            "5,25%"
+          ]
+        ],
+        "raw": {
+          "score": -15
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    }
+  ]
+}
